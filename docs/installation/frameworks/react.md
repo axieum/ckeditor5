@@ -14,7 +14,7 @@ order: 30
 	</a>
 </p>
 
-The easiest way to use CKEditor 5 in your React application is by choosing one of the {@link installation/advanced/predefined-builds#available-builds rich text editor builds}. Additionally, it is also possible to integrate [CKEditor 5 built from source](#integrating-ckeditor-5-built-from-source) into your application. You can also use a customized editor built by using [CKEditor 5 online builder](#using-the-ckeditor-5-online-builder) in any React application.
+The easiest way to use CKEditor 5 in your React application is by choosing one of the {@link installation/advanced/predefined-builds#available-builds rich text editor builds}. You can also use a customized editor built by using [CKEditor 5 online builder](#using-the-ckeditor-5-online-builder) in any React application. Additionally, it is also possible to integrate [CKEditor 5 built from source](#integrating-the-editor-from-source) into your application, which will allow you to use the full power of the {@link framework/guides/overview CKEditor 5 Framework}.
 
 ## Quick start
 
@@ -136,7 +136,7 @@ The {@link installation/advanced/predefined-builds CKEditor 5 builds} come ready
 
 There are three main ways to do that.
 
-### 1. Using the CKEditor 5 online builder
+### Using the CKEditor 5 online builder
 
 Create your own CKEditor 5 build with customized plugins, toolbar and language in five simple steps using our dedicated [online builder](https://ckeditor.com/ckeditor-5/online-builder/). It is a fast, intuitive tool that allows for customizing your editing experience with a set of plugins of your own choice.
 
@@ -254,15 +254,13 @@ It can also be set on-demand, per command call:
 NODE_OPTIONS="--max-old-space-size=4096" yarn build
 ```
 
-### 2. Customizing one of the predefined builds
+### Customizing one of the predefined builds
 
-This option requires making changes to a {@link installation/getting-started/quick-start-other#building-the-editor-from-source predefined build} of your choice. Much like in [the case of online builder](#integrating-a-build-from-the-online-builder), you then need to place the custom editor's folder next to `src/` directory and add it as a dependency using `yarn add file` command.
+This option requires making changes to a {@link installation/getting-started/quick-start-other#building-the-editor-from-source predefined build} of your choice. Much like in [the case of online builder](#using-the-ckeditor-5-online-builder), you then need to place the custom editor's folder next to `src/` directory and add it as a dependency using `yarn add file` command.
 
 Read more about customising a predefined build in the {@link installation/getting-started/installing-plugins Installing plugins} guide.
 
-### 3. Integrating the editor from source
-
-Integrating the rich text editor from source allows you to use the full power of the {@link framework/guides/overview CKEditor 5 Framework}.
+### Integrating the editor from source
 
 In this approach, you will include a CKEditor 5 {@link installation/advanced/integrating-from-source built from source}, so you will choose the editor creator you want and the list of plugins, etc. It is more powerful and creates a tighter integration between your application and the WYSIWYG editor, however, it requires adjusting your `webpack.config.js` to CKEditor 5 needs.
 
@@ -473,7 +471,7 @@ For such a scenario we provide a few ready-to-use integrations featuring collabo
 
 It is not mandatory to build applications on top of the above samples, however, they should help you get started.
 
-Note: These integrations are meant to be as simple as possible, so they do not use the Create React App CLI. 
+Note: These integrations are meant to be as simple as possible, so they do not use the Create React App CLI.
 
 ## Context feature
 
@@ -594,7 +592,7 @@ For more information, please refer to the {@link features/ui-language Setting th
 
 ### CKEditor 5 built from source
 
-Using the editor [built from source](#integrating-ckeditor-5-built-from-source) requires you to modify the webpack configuration. First, install the [official webpack plugin](https://www.npmjs.com/package/@ckeditor/ckeditor5-dev-webpack-plugin) that allows localizing editor builds:
+Using the editor [built from source](#integrating-the-editor-from-source) requires you to modify the webpack configuration. First, install the [official webpack plugin](https://www.npmjs.com/package/@ckeditor/ckeditor5-dev-webpack-plugin) that allows localizing editor builds:
 
 ```
 yarn add @ckeditor/ckeditor5-dev-webpack-plugin --dev
